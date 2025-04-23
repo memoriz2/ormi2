@@ -1,0 +1,25 @@
+img {
+    max-width: 50%;
+}
+
+header h2 {
+    color: pink;
+    font-weight: bold;
+    font-size: 50px;
+    -webkit-text-stroke: 1px red;
+}
+      
+body {
+    background-color: antiquewhite;
+}
+
+article{
+    border: solid;
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+}
+
+* {
+    text-align: center;
+}
