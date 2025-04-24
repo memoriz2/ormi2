@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <input type="checkbox" id="toggle" class="toggle-input">
+        <label for="toggle" class="card-content">
+          <h2>카드 제목</h2>
+          <p>이곳에 카드 내용이 들어갑니다. 클릭하면 더보기 버튼이 나타납니다.</p>
+        </label>
+        <div class="more-button">더보기</div>
+      </div>
+      
+      <style>
+      .card {
+        width: 200px;
+        height: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+      
+      .card:hover {
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .card-content {
+        display: block;
+        padding: 16px;
+        cursor: pointer;
+      }
+      
+      .toggle-input {
+        display: none;
+      }
+      
+      .more-button {
+        display: none;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        background-color: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .toggle-input:checked ~ .more-button {
+        display: block;
+      }
+      
+      .toggle-input:checked ~ .card-content {
+        background-color: #f8f9fa;
+      }
+      </style>
+</body>
+</html>
