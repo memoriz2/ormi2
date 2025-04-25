@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Position 실습</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>🔝 Sticky Header</header>
+
+  <main>
+    <section class="static-box">
+      🔹 <strong>static</strong><br/>
+      문서 흐름에 따라 배치되는 기본 위치입니다.
+    </section>
+
+    <section class="relative-box">
+      🔸 <strong>relative</strong><br/>
+      원래 위치 기준으로 <code>left: 30px; top: 10px;</code>만큼 이동합니다.
+    </section>
+
+    <section class="absolute-wrapper">
+      🔺 <strong>absolute</strong><br/>
+      가장 가까운 position이 설정된 부모를 기준으로 위치가 지정됩니다.
+      <div class="absolute-box">💥 절대 위치</div>
+    </section>
+
+    <section class="fixed-box">
+      📌 <strong>fixed</strong><br/>
+      화면 기준으로 고정되며, 스크롤해도 위치가 바뀌지 않습니다.
+    </section>
+
+    <section style="height: 1000px;">
+      🔽 스크롤하면서 sticky header가 어떻게 동작하는지 확인해보세요!
+    </section>
+  </main>
+</body>
+</html>
+

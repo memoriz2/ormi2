@@ -1,0 +1,15 @@
+.a{
+    border:solid;
+}
+
+.b{
+    position: relative;
+    border: dashed;
+}
+
+.target{
+    position:absolute;
+    border: double;
+    top: 0px;
+    right: 0px;
+}
