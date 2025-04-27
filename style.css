@@ -1,0 +1,99 @@
+
+html{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    color : #ffffff;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+} 
+
+nav ul li a{
+    color:aliceblue;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.schedule{
+    width: 250px;
+    position: fixed;
+    border:solid red;
+    flex-direction: column;
+}
+.diary {
+    width:85%;
+    right: 0;
+    position: absolute;
+    border:double blue;
+    background-color: antiquewhite;
+}
+
+footer{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(94, 51, 1);
+    color :aliceblue;
+    text-align: center;
+    z-index: 1500;
+}
+
+footer div{
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    nav ul{
+        flex-direction: column;
+    }
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container div{
+        flex-direction: column;
+    }
+  
+    .schedule {
+        flex-direction: column;
+    }
+
+    .diary{
+        background-color: #ffffff;
+        z-index: 1000;
+        flex-direction: column;
+        background-color: antiquewhite;
+    }
+
+    footer{
+        height: 60px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgb(94, 51, 1);
+        color :aliceblue;
+        text-align: center;
+        z-index: 1500;
+    }
+  }
