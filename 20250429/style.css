@@ -1,0 +1,69 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .site-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+    min-width: 250px;
+  }
+
+  .site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1024px){
+    .card{
+        flex: 1 1 calc(50%-2rem);
+    }
+  }
+  /* 데스크탑에서는 카드가 3개나 4개가 나란히 나왔을때 태블릿에서는 카드 2개씩 정렬*/
+
+  @media (max-width: 600px){
+    .card{
+        flex: 1 1 100%
+      
+    }
+    .nav-list{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+  }
