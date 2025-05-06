@@ -1,0 +1,63 @@
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --button-bg:#ffffff;
+    --button-text:#333;
+    --text-align: center;
+    --border-color: aliceblue;
+    --border-style: solid;
+    --btn-width:10%;
+    --display: flex;
+    --justify-content: center;
+    --flex-direction: column;
+    --transform: translate(-50%, -50%);
+}
+  
+  body{
+    color: var(--text-color);
+    background-color: var(--main-color);
+  }
+  
+  main{
+    text-align: var(--text-align);
+    display: var(--display);
+    justify-content: var(--justify-content);
+    flex-direction: var(--flex-direction);
+    position: relative;
+    border-sizing: border-box;
+  }
+  .btn-container{
+    border-color: var(--border-color);
+    border-style: var(--border-style);
+    width: var(--btn-width);
+    text-align: center;
+    position: absolute; /* 기존 속성 유지 */
+    top: 70%;
+    left: 50%;
+    transform: var(--transform);
+    margin-top: 50px;
+  }
+ 
+  .text-container{
+    position: relative;
+  }
+
+  .text{
+    position:absolute;
+    margin-top: 80px;
+    left: 50%;
+    transform: var(--transform);
+  }
+
+
+  .btn:hover{
+    cursor: pointer;
+  }
+
+[data-theme="dark"] {
+        background-color: #333;
+        color: #ffffff;
+    }
+
+  
