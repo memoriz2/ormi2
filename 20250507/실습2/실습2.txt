@@ -1,0 +1,100 @@
+//1. HTML 문서가 주어졌을 때, querySelector()를 사용하여 ID가 title인 요소를 선택하고, 그 텍스트 내용을 "새로운 제목"으로 변경하세요.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 1</title>
+</head>
+<body>
+  <h1 id="title">기존 제목</h1>
+
+  <script>
+    // 여기에 JavaScript 코드를 작성하세요.
+    let title = document.querySelector("#title");
+    title.textContent="새로운 제목";
+  </script>
+</body>
+</html>
+
+<!-- 주어진 HTML 코드에서, querySelector()를 사용하여 클래스가 highlight인 첫 번째 요소를 선택하고, 배경색을 "yellow"로 변경하세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 2</title>
+</head>
+<body>
+  <p class="highlight">첫 번째 문단</p>
+  <p class="highlight">두 번째 문단</p>
+
+  <script>
+    // 여기에 JavaScript 코드를 작성하세요.
+    let highlight = document.getElementsByClassName("highlight");
+        highlight[0].style.backgroundColor="yellow";
+  </script>
+</body>
+</html>
+
+<!-- querySelector()를 사용하여 첫 번째 <p> 요소를 선택하고, 그 텍스트를 "이 문단은 선택되었습니다."로 변경하세요. -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 3</title>
+</head>
+<body>
+  <p>첫 번째 문단</p>
+  <p>두 번째 문단</p>
+
+  <script>
+    // 여기에 JavaScript 코드를 작성하세요.
+    let pArr = document.querySelector('p');
+    pArr.textContent = "이 문단은 선택되었습니다."
+  </script>
+</body>
+</html>
+
+
+HTML에서 querySelector()를 사용하여 class="content"인 요소 내부에서 첫 번째 <p> 요소를 선택하고, 그 텍스트를 "내용이 변경되었습니다!"로 수정하세요.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 4</title>
+</head>
+<body>
+  <div class="content">
+    <p>첫 번째 문단</p>
+    <p>두 번째 문단</p>
+  </div>
+
+  <script>
+    // 여기에 JavaScript 코드를 작성하세요.
+    let p = document.querySelector(".content").childNodes;
+    p[1].textContent = "내용이 변경되었습니다.!"
+  </script>
+</body>
+</html>
+
+
+HTML에서 querySelector()를 사용하여 type="submit"인 첫 번째 <button> 요소를 선택하고, 텍스트를 "제출 버튼"으로 변경하세요.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 5</title>
+</head>
+<body>
+  <button type="button">일반 버튼</button>
+  <button type="submit">확인</button>
+
+  <script>
+    // 여기에 JavaScript 코드를 작성하세요.
+    let btn = document.querySelector('button[type="submit"]');
+    btn.textContent="제출 버튼";
+  </script>
+</body>
+</html>

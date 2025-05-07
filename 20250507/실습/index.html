@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 요소 삭제 예제</title>
+</head>
+<body>
+  <h1>이미지 삭제 예제</h1>
+
+  <!-- 삭제할 이미지 -->
+  <img id="image" src="https://media.istockphoto.com/id/1482199015/ko/사진/행복한-강아지-웨일스-어-코기-14-주령-개가-윙크하고-헐떡이고-흰색에-고립되어-앉아-있습니다.jpg?s=612x612&w=0&k=20&c=vW29tbABUS2fEJvPi8gopZupfTKErCDMfeq5rrOaAME=" alt="이미지1">
+  <img id="image2" src="../강아지.jpg" alt="강아지">
+  <!-- 삭제 버튼 -->
+  <button id="deleteButton">이미지 삭제</button>
+
+  <script>
+    // 버튼 클릭 시 이미지를 삭제하는 기능
+    document.getElementById("deleteButton").addEventListener("click", function() {
+      // 이미지 요소 선택
+     // 여기다 코드를 입력해줘요
+     document.getElementById("image").remove();
+      // 이미지 삭제
+    //   image.remove(); // DOM에서 삭제
+    });
+  </script>
+
+
+
+</body>
+</html>
