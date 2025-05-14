@@ -1,0 +1,27 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: #4a90e2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 2s ease-in-out forwards;
+  }
+  .box {
+    animation: growShrink 1.5s ease-in-out infinite;
+  }
+
+@keyframes growShrink {
+
+        0% {
+          transform: scale(1); /* 원래 크기 */
+        }
+        50% {
+          transform: scale(1.5); /* 1.5배 커짐 */
+        }
+        100% {
+          transform: scale(1); /* 다시 원래 크기로 */
+        }
+      
+  }

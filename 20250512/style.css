@@ -1,0 +1,93 @@
+/* 화면에 가로로 4장의 카드를 정렬하세요.
+각 카드는 동일한 디자인으로 구성하고, 마우스를 올렸을 때 다음의 변형 효과 4가지가 동시에 적용되도록 만드세요:
+
+카드의 크기를 110%로 키우세요.
+카드를 시계 방향으로 5도 회전시키세요.
+카드를 위쪽으로 10픽셀 이동시키세요.
+카드를 수평 방향으로 20도 기울이세요.
+
+변형은 모두 부드럽게 전환되도록 설정하세요.
+변형이 적용되었다가, 마우스를 떼면 다시 원래 상태로 자연스럽게 돌아오도록 만들어야 합니다.
+
+챌린지
+카드를 클릭했을 때, 앞면이 사라지고 뒷면의 비밀 메시지가 나타나는 효과를 구현해보세요.
+예: "HELLO" → "Nice to meet you", "SECRET" → "Don't tell anyone" 등
+전환 효과는 자유롭게 구성하되, 사용자의 클릭에 반응하는 형태로 만들어보세요.
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>비밀 카드 게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>:black_joker: 비밀 카드에 마우스를 올려보세요</h1>
+  <div class="card-container">
+    <div class="card">HELLO</div>
+    <div class="card">SECRET</div>
+    <div class="card">CLICK</div>
+    <div class="card">WOW</div>
+  </div>
+</body>
+</html> */
+
+
+:root{
+    --cursor: pointer;
+}
+
+.card-container{
+    display: flex;
+    gap: 20em;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1000px;
+   position:relative;
+   transform-style: preserve-3d;
+   transition:transform 0.5s ease;
+}
+
+.card{
+    border: solid;
+    padding : 10px;
+    cursor: var(--cursor);
+}
+
+.card.scale:hover{
+    transform: scale(1.2);
+}
+
+.card.skew:hover{
+    transform: skew(20deg);
+}
+
+.card.translate:hover{
+    transform: translateY(-10px);
+}
+
+.card.rotate:hover{
+    transform: rotate(20deg);
+}
+
+
+
+.card.front,.card.back{
+    position:absolute;
+    backface-visibility: hidden; /* 뒷면 안 보이게 */
+    color:white;
+
+}
+.card.front{
+    background:blue;
+}
+.card.back{
+    background:red;
+}
+.card.back:active{
+    transform: rotateY(180deg);
+}

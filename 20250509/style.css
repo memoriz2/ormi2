@@ -24,8 +24,8 @@ body {
 }
 
 
-.login-container input [type="text"],
-.login-container input [type="password"] {
+.login-container input[type="text"],
+.login-container input[type="password"] {
     width: 50%;
     padding: 10px;
     margin: 10px 0; 
