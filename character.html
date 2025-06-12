@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>외계인 햄스터 캐릭터</title>
+        <style>
+            body {
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .alien-hamster {
+                position: relative;
+                width: 140px;
+                height: 160px;
+                animation: float-anim 2s infinite ease-in-out;
+            }
+            @keyframes float-anim {
+                0% {
+                    transform: translateY(0) rotate(-7deg);
+                }
+                20% {
+                    transform: translateY(-12px) rotate(-3deg);
+                }
+                50% {
+                    transform: translateY(-24px) rotate(7deg);
+                }
+                80% {
+                    transform: translateY(-12px) rotate(-3deg);
+                }
+                100% {
+                    transform: translateY(0) rotate(-7deg);
+                }
+            }
+            .body {
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                width: 100px;
+                height: 80px;
+                background: #ffe0b3;
+                border-radius: 50% 50% 45% 45% / 55% 55% 50% 50%;
+                z-index: 2;
+                border: 4px solid #b48a5a;
+            }
+            .ear {
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                background: #ffe0b3;
+                border-radius: 50%;
+                border: 4px solid #b48a5a;
+                top: 10px;
+                z-index: 3;
+            }
+            .ear.left {
+                left: 4px;
+            }
+            .ear.right {
+                right: 4px;
+            }
+            .glasses-left,
+            .glasses-right {
+                position: absolute;
+                top: 20px;
+                width: 19px;
+                height: 32px;
+                background-color: rgb(0 33 0);
+                border: 6px solid #39ff14;
+                box-shadow: 0 0 16px 2px #39ff14;
+                border-radius: 0 100% 0 100%;
+                z-index: 5;
+            }
+            .glasses-left {
+                left: 11px;
+                transform: rotate(327deg) skewY(-10deg);
+            }
+            .glasses-right {
+                left: 59px;
+                transform: rotate(93deg) skewY(10deg);
+            }
+            .glasses-bridge {
+                position: absolute;
+                top: 38px;
+                left: 41px;
+                width: 16px;
+                height: 6px;
+                border-bottom: 4px solid #39ff14;
+                border-radius: 0 0 8px 8px;
+                z-index: 6;
+            }
+            .arm {
+                position: absolute;
+                width: 5px;
+                height: 18px;
+                background: #433b30;
+                border: 2px solid #0f0f0e;
+                border-radius: 8px;
+                z-index: 9;
+            }
+            .arm.left {
+                top: 98px;
+                animation: stickLeftMove 1.2s infinite alternate ease-in-out;
+            }
+            .arm.right {
+                top: 98px;
+                animation: stickRightMove 1.2s infinite alternate ease-in-out;
+            }
+            .stick {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: #dc1818;
+                border: 4px solid #960b0b;
+                border-radius: 50%;
+                z-index: 10;
+            }
+            .stick.left {
+                left: 26px;
+                top: 91px;
+                animation: stickLeftMove 1.2s infinite alternate ease-in-out;
+            }
+            .stick.right {
+                right: 24px;
+                top: 91px;
+                animation: stickRightMove 1.2s infinite alternate ease-in-out;
+            }
+            @keyframes stickLeftMove {
+                0% {
+                    left: 26px;
+                    transform: rotate(-10deg);
+                }
+                50% {
+                    left: 20px;
+                    transform: rotate(15deg);
+                }
+                100% {
+                    left: 26px;
+                    transform: rotate(-10deg);
+                }
+            }
+            @keyframes stickRightMove {
+                0% {
+                    right: 24px;
+                    transform: rotate(10deg);
+                }
+                50% {
+                    right: 18px;
+                    transform: rotate(-15deg);
+                }
+                100% {
+                    right: 24px;
+                    transform: rotate(10deg);
+                }
+            }
+            .blush {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: #f8b6b6;
+                border-radius: 50%;
+                top: 56px;
+                opacity: 0.7;
+            }
+            .blush.left {
+                left: 12px;
+            }
+            .blush.right {
+                right: 12px;
+            }
+            .mouth {
+                position: absolute;
+                left: 44px;
+                top: 60px;
+                width: 12px;
+                height: 6px;
+                border-radius: 0 0 12px 12px;
+                border-bottom: 4px solid #b48a5a;
+            }
+            .ufo {
+                position: absolute;
+                left: 10px;
+                top: 96px;
+                width: 120px;
+                height: 32px;
+                background: #b47cc7;
+                border-radius: 50% 50% 50% 50% / 60% 60% 100% 100%;
+                z-index: 1;
+                border: 4px solid #7a4e9c;
+            }
+            .ufo-leg {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: #0c629b;
+                border-radius: 50%;
+                border: 4px solid #091a5d;
+                top: 24px;
+            }
+            .ufo-leg.left {
+                left: 4px;
+            }
+            .ufo-leg.center {
+                left: 50px;
+            }
+            .ufo-leg.right {
+                right: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alien-hamster">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="body">
+                <div class="glasses-left"></div>
+                <div class="glasses-right"></div>
+                <div class="glasses-bridge"></div>
+                <div class="blush left"></div>
+                <div class="blush right"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="stick left"></div>
+            <div class="stick right"></div>
+            <div class="ufo">
+                <div class="ufo-leg left"></div>
+                <div class="ufo-leg center"></div>
+                <div class="ufo-leg right"></div>
+            </div>
+        </div>
+    </body>
+</html>
